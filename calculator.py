@@ -24,6 +24,22 @@ class Calculator:
         if b == 0:
             raise ValueError("0으로 나눌 수 없습니다")
         return a / b
+    
+    def power(self, a, b):
+        """a의 b제곱을 계산한다"""
+        return a ** b
+    
+    def square_root(self, a):
+        """제곱근을 계산한다"""
+        if a < 0:
+            raise ValueError("음수의 제곱근은 계산할 수 없습니다")
+        return a ** 0.5
+    
+    def modulo(self, a, b):
+        """a를 b로 나눈 나머지를 반환한다"""
+        if b == 0:
+            raise ValueError("0으로 나눌 수 없습니다")
+        return a % b
 
 if __name__ == "__main__":
     calc = Calculator()
